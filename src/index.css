@@ -1,0 +1,45 @@
+:root {
+    --primary-color: #f44336;
+    --background-color: #0a0a0a;
+    --text-color: white;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+/* header section */
+.top-bar{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+.nav{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border: solid 1px white;
+    border-radius: 50px;
+    padding: 10px;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-left: 400px;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px)
+    webkit-backdrop-filter: blur(5px);
+
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
