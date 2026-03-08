@@ -8,6 +8,7 @@ export default function ExtraInfo() {
     const projects = [
         {
             image: kanbanPreview,
+            viewLink: 'https://github.com/BrooklynTreasurer/BROTRE25500_pto2505_GroupA_Brooklyn-Treasurer_JSLPP',
             title: 'KanBan Task Manager',
             description:
                 'A full-featured e-commerce solution with payment integration and admin dashboard.',
@@ -15,12 +16,14 @@ export default function ExtraInfo() {
         },
         {
             image: PortfolioPreview,
+            viewLink: 'https://github.com/BrooklynTreasurer/BROTRE25500_pto2505_GroupA_Brooklyn-Treasurer_CDV05',
             title: 'Portfolio Website Design',
             description: 'Creative portfolio website with smooth animations and modern UI.',
             tags: ['React', 'CSS', 'UI/UX'],
         },
         {
             image: PodcastAppPreview,
+            viewLink: 'https://github.com/BrooklynTreasurer/BROTRE25500_pto2505_GroupA_Brooklyn-Treasurer_DJS03',
             title: 'Podcast App UI',
             description: 'Modern podcast application interface with intuitive navigation and rich media playback.',
             tags: ['React', 'JavaScript', 'UI/UX', 'Mobile' ,'CSS'],
@@ -142,9 +145,18 @@ export default function ExtraInfo() {
                             <div className="project-image-container">
                                 <img src={project.image} alt={`${project.title} preview`} className="project-image" />
                                 <div className="project-overlay">
-                                    <button type="button" className="view-project">
-                                        View Project
-                                    </button>
+                                    {project.viewLink ? (
+                                        <a
+                                            className="view-project"
+                                            href={project.viewLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            View Project
+                                        </a>
+                                    ) : (
+                                        <span className="view-project view-project-disabled">Coming Soon</span>
+                                    )}
                                 </div>
                             </div>
                             

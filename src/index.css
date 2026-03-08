@@ -14,33 +14,58 @@ body {
 
 /* header section */
 .top-bar{
+    width: min(1200px, calc(100% - 40px));
+    margin: 14px auto 0;
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    gap: 18px;
+    padding: 10px 14px;
     color: white;
+    position: sticky;
+    top: 12px;
+    z-index: 50;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
 }
 
 .nav{
     display: flex;
-    gap: 20px;
     align-items: center;
-    border: solid 1px white;
+    margin-left: auto;
+    border: 1px solid rgba(255, 255, 255, 0.28);
     border-radius: 50px;
-    padding: 10px;
-    padding-right: 100px;
-    padding-left: 100px;
-    margin-left: 400px;
-    background: rgba(255, 255, 255, 0.18);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-
+    padding: 8px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .nav-list{
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__item {
+    color: #f0f0f0;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.nav__item:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 12px rgba(244, 67, 54, 0.35);
 }
 
 /* content section */
@@ -198,6 +223,27 @@ body {
 }
 
 @media (max-width: 760px) {
+    .top-bar {
+        width: calc(100% - 20px);
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .nav {
+        width: 100%;
+        padding: 8px 14px;
+    }
+
+    .nav-list {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .nav__item {
+        font-size: 0.88rem;
+    }
+
     .content {
         padding: 30px 20px 10px;
     }
@@ -355,6 +401,13 @@ body {
     border-radius: 8px;
     padding: 8px 12px;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.view-project-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 .tone-1 {
