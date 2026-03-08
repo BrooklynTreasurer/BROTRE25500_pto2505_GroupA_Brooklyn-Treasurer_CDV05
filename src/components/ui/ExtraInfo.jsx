@@ -1,20 +1,28 @@
+import kanbanPreview from '../images/KanBan-Preview.png';
+import PortfolioPreview from '../images/Portfolio-Preview.png';
+import heroPreview from '../images/hero-image.jpg';
+import PodcastAppPreview from '../images/PodcastApp-Preview.png';
+
 export default function ExtraInfo() {
     const projects = [
         {
-            title: 'Modern E-commerce Platform',
+            image: kanbanPreview,
+            title: 'KanBan Task Manager',
             description:
                 'A full-featured e-commerce solution with payment integration and admin dashboard.',
-            tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+            tags: ['HTML', 'JavaScript', 'CSS', 'Mobile', 'UI/UX'],
         },
         {
+            image: PortfolioPreview,
             title: 'Portfolio Website Design',
             description: 'Creative portfolio website with smooth animations and modern UI.',
-            tags: ['Next.js', 'Tailwind', 'Framer Motion'],
+            tags: ['React', 'CSS', 'UI/UX'],
         },
         {
-            title: 'Mobile Banking App UI',
-            description: 'Intuitive mobile banking interface with seamless user experience.',
-            tags: ['React Native', 'Firebase', 'UI/UX'],
+            image: PodcastAppPreview,
+            title: 'Podcast App UI',
+            description: 'Modern podcast application interface with intuitive navigation and rich media playback.',
+            tags: ['React', 'JavaScript', 'UI/UX', 'Mobile' ,'CSS'],
         },
     ];
 
@@ -30,19 +38,9 @@ export default function ExtraInfo() {
                 'Beautiful, intuitive interfaces designed with users in mind. Creating seamless experiences that drive engagement.',
         },
         {
-            title: 'E-commerce Websites',
-            description:
-                'Full-featured online stores with secure payment integration, inventory management, and order tracking.',
-        },
-        {
             title: 'Mobile App UI',
             description:
                 'Responsive mobile interfaces that work flawlessly across all devices and screen sizes.',
-        },
-        {
-            title: 'SEO Optimization',
-            description:
-                "Improve your website's visibility and ranking on search engines with proven SEO strategies.",
         },
         {
             title: 'Web Maintenance',
@@ -67,25 +65,17 @@ export default function ExtraInfo() {
         {
             title: 'Backend',
             items: [
-                ['Node.js', 87],
-                ['Express.js', 85],
-                ['PHP', 78],
-                ['Laravel', 75],
-                ['MongoDB', 80],
-                ['PostgreSQL', 82],
+                ['Node.js', 67],
+                ['Express.js', 35],
+                ['PostgreSQL', 42],
                 ['REST APIs', 90],
             ],
         },
         {
             title: 'Tools & Others',
             items: [
-                ['Figma', 92],
+                ['Figma', 62],
                 ['Git/GitHub', 88],
-                ['Firebase', 85],
-                ['Docker', 75],
-                ['AWS', 72],
-                ['Webpack', 78],
-                ['Jest', 80],
             ],
         },
     ];
@@ -95,21 +85,26 @@ export default function ExtraInfo() {
             <section className="portfolio-section" id="projects">
                 <p className="section-label">PORTFOLIO</p>
                 <h2 className="section-title">
-                    My Recent <span>Projects</span>
+                    My Recent <span className='gradient-text'>Projects</span>
                 </h2>
                 <div className="section-underline" />
 
                 <div className="filter-row">
                     <button type="button" className="filter-pill active">All</button>
-                    <button type="button" className="filter-pill">Web</button>
-                    <button type="button" className="filter-pill">Mobile</button>
-                    <button type="button" className="filter-pill">Design</button>
                 </div>
 
                 <div className="projects-grid">
                     {projects.map((project, index) => (
                         <article className="project-card" key={project.title}>
-                            <div className={`project-card-image tone-${index + 1}`} />
+                            <div className="project-image-container">
+                                <img src={project.image} alt={`${project.title} preview`} className="project-image" />
+                                <div className="project-overlay">
+                                    <button type="button" className="view-project">
+                                        View Project
+                                    </button>
+                                </div>
+                            </div>
+                            
                             <div className="project-card-content">
                                 <h3>{project.title}</h3>
                                 <p>{project.description}</p>
@@ -118,9 +113,6 @@ export default function ExtraInfo() {
                                         <span key={tag}>{tag}</span>
                                     ))}
                                 </div>
-                                <button type="button" className="project-link">
-                                    View Case Study
-                                </button>
                             </div>
                         </article>
                     ))}
@@ -130,7 +122,7 @@ export default function ExtraInfo() {
             <section className="services-section" id="services">
                 <p className="section-label">SERVICES</p>
                 <h2 className="section-title">
-                    What I <span>Offer</span>
+                    What I <span className='gradient-text'>Offer</span>
                 </h2>
                 <div className="section-underline" />
 
@@ -153,7 +145,7 @@ export default function ExtraInfo() {
             <section className="skills-section" id="skills">
                 <p className="section-label">MY SKILLS</p>
                 <h2 className="section-title">
-                    Technical <span>Expertise</span>
+                    Technical <span className='gradient-text'>Expertise</span>
                 </h2>
                 <div className="section-underline" />
 

@@ -6,11 +6,11 @@ export default function Content() {
             <div className="content-text-container">
                 <p className="availability-pill">Available for Work</p>
                 <h1 className="content-title">
-                    Hi, I&apos;m <span className="gradient-text">Brooklyn Treasurer</span>
+                    Hi, I'm <span className="gradient-text">Brooklyn Treasurer</span>
                 </h1>
-                <h2 className="content-subtitle">Web Developer &amp; UI/UX Designer</h2>
+                <h2 className="content-subtitle">Web Developer & UI/UX Designer</h2>
                 <p className="content-text">
-                    I craft beautiful, functional web experiences that solve real problems.
+                   Blending Design & Code to Build Seamless Digital Experiences that solve real problems.
                     Specialized in modern web technologies and creating seamless user
                     interfaces.
                 </p>
@@ -35,7 +35,7 @@ export default function Content() {
                         GH
                     </a>
                     <a
-                        href="https://www.linkedin.com/in/brooklyntreasurer/"
+                        href="https://www.linkedin.com/in/brooklyn-treasurer-982532297/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="social-icon"

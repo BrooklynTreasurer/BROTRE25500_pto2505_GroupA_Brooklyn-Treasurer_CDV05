@@ -32,8 +32,8 @@ body {
     margin-left: 400px;
     background: rgba(255, 255, 255, 0.18);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px)
-    webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 
 }
 
@@ -74,7 +74,9 @@ body {
 }
 
 .gradient-text {
-    color: var(--primary-color);
+        background: linear-gradient(135deg, var(--primary-color) 0%, #0ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 
 .content-subtitle {
@@ -201,3 +203,310 @@ body {
     }
 }
 
+/* extra info section */
+.extra-info {
+    padding: 30px 50px 70px;
+}
+
+.portfolio-section,
+.services-section,
+.skills-section {
+    margin-top: 70px;
+}
+
+.section-label {
+    margin: 0;
+    text-align: center;
+    color: var(--primary-color);
+    letter-spacing: 0.08em;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.section-title {
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    font-weight: 500;
+}
+
+.section-title span {
+    color: var(--primary-color);
+}
+
+.section-underline {
+    width: 76px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--primary-color);
+    margin: 12px auto 0;
+}
+
+.filter-row {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-pill {
+    border: 1px solid #2e2e2e;
+    background: #121212;
+    color: #e2e2e2;
+    border-radius: 10px;
+    padding: 9px 22px;
+    cursor: pointer;
+}
+
+.filter-pill.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+.projects-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.project-card {
+    border: 1px solid #242424;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #101010;
+}
+
+.project-card-image,
+.project-image-container {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.15));
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 14px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.project-image-container:hover .project-overlay {
+    opacity: 1;
+}
+
+.view-project {
+    border: 1px solid var(--primary-color);
+    background: rgba(10, 10, 10, 0.8);
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.tone-1 {
+    background: linear-gradient(135deg, #586f5f, #c89453);
+}
+
+.tone-2 {
+    background: linear-gradient(135deg, #d8d8d8, #8e8e8e);
+}
+
+.tone-3 {
+    background: linear-gradient(135deg, #80a4c0, #c29f59);
+}
+
+.project-card-content {
+    padding: 16px;
+}
+
+.project-card-content h3 {
+    margin: 0;
+    font-size: 1.55rem;
+    font-weight: 500;
+}
+
+.project-card-content p {
+    margin: 10px 0 0;
+    color: #a8a8a8;
+    line-height: 1.55;
+}
+
+.project-tags {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tags span {
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    background: rgba(244, 67, 54, 0.13);
+}
+
+.project-link {
+    margin-top: 14px;
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.services-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.service-card {
+    border: 1px solid #242424;
+    border-radius: 16px;
+    background: #101010;
+    padding: 20px;
+    min-height: 245px;
+}
+
+.service-card:nth-child(2) {
+    border-color: rgba(244, 67, 54, 0.6);
+    box-shadow: 0 0 24px rgba(244, 67, 54, 0.12);
+}
+
+.service-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: rgba(244, 67, 54, 0.16);
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.service-card h3 {
+    margin: 14px 0 0;
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+
+.service-card p {
+    margin: 10px 0 0;
+    color: #a8a8a8;
+    line-height: 1.6;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 14px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.skills-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.skills-card {
+    border: 1px solid #242424;
+    border-radius: 16px;
+    background: #101010;
+    padding: 20px;
+}
+
+.skills-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.skills-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: var(--primary-color);
+    color: white;
+    font-weight: 700;
+}
+
+.skills-header h3 {
+    margin: 0;
+    font-size: 1.95rem;
+    font-weight: 500;
+}
+
+.skills-items {
+    display: grid;
+    gap: 12px;
+}
+
+.skill-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.skill-meta span:last-child {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.skill-track {
+    width: 100%;
+    height: 8px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: #292929;
+}
+
+.skill-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), #ff8a80);
+}
+
+@media (max-width: 1040px) {
+    .projects-grid,
+    .services-grid,
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .extra-info {
+        padding: 20px 20px 60px;
+    }
+
+    .projects-grid,
+    .services-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
