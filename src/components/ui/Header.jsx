@@ -4,7 +4,8 @@ export default function Header() {
         <>
           <section className="top-bar">
                 <header className="header">
-                    <h2 className="header__title">Brooklyn Treasurer</h2>
+                    <p className="user">B</p>
+                    <h2 className="header__title">Brooklyn Portfolio</h2>
                 </header>
 
                 <nav className="nav">
