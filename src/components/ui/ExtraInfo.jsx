@@ -1,6 +1,7 @@
 import kanbanPreview from '../images/KanBan-Preview.png';
 import PortfolioPreview from '../images/Portfolio-Preview.png';
 import heroPreview from '../images/hero-image.jpg';
+import CartoonHero from '../images/cartoon-hero.png';
 import PodcastAppPreview from '../images/PodcastApp-Preview.png';
 
 export default function ExtraInfo() {
@@ -28,21 +29,25 @@ export default function ExtraInfo() {
 
     const services = [
         {
+            icon: '💻',
             title: 'Website Development',
             description:
                 'Custom, responsive websites built with modern technologies. From simple landing pages to complex web applications.',
         },
         {
+            icon: '🎨',
             title: 'UI/UX Design',
             description:
                 'Beautiful, intuitive interfaces designed with users in mind. Creating seamless experiences that drive engagement.',
         },
         {
+            icon: '📱',
             title: 'Mobile App UI',
             description:
                 'Responsive mobile interfaces that work flawlessly across all devices and screen sizes.',
         },
         {
+            icon: '🔧',
             title: 'Web Maintenance',
             description:
                 'Ongoing support, updates, and maintenance to keep your website running smoothly and securely.',
@@ -82,6 +87,44 @@ export default function ExtraInfo() {
 
     return (
         <main className="extra-info">
+
+           <section className="about-section" id="about">
+                <p className="section-label">ABOUT ME</p>
+                <h2 className="section-title">
+                    A Bit <span className='gradient-text'>About Me</span>
+                </h2>
+                <div className="section-underline" />
+
+                <div className="about-content">
+                     <div className="about-image-container">
+                        <img src={CartoonHero} alt="About me" className="about-image" />
+                    </div>
+                    <div className="about-text">
+                        <h3>Passionate Soon to be <span className="about-span">Full Stack Developer</span></h3>
+                        <p>
+                            I am a passionate web developer and UI/UX designer dedicated to crafting seamless digital experiences. With a strong foundation in modern web technologies, I specialize in creating intuitive user interfaces that solve real problems. My approach combines creativity with technical expertise to deliver solutions that are both visually appealing and highly functional.
+                        </p>
+                        <p>
+                            Whether it’s building responsive websites, designing engaging user interfaces, or developing mobile-friendly applications, I am committed to delivering high-quality work that exceeds expectations. I thrive on collaboration and am always eager to take on new challenges that allow me to grow and innovate in the ever-evolving world of web development and design.
+                        </p>
+
+                        <h3 className='about-span'>Background-info</h3>
+                            <h4 className="gradient-text">CodeSpace-Academy (2025-2026)</h4> 
+                                <ul className="education-list">
+                                    <li>Halfway through a comprehensive front-end development course.</li>
+                                    <li>Learned HTML, CSS, and Tailwind CSS.</li>
+                                    <li>Developed multiple projects to apply learned skills.</li>
+                                </ul>
+                            <h4 className="gradient-text">Kibler-Park Secondary (2019-2023)</h4>
+                                <ul class="education-list">
+                                    <li>Graduated with a focus on computer science and mathematics.</li>
+                                    <li>Participated in coding clubs and competitions.</li>
+                                    <li>Developed foundational skills in programming and problem-solving.</li>
+                                </ul>
+                    </div>
+                </div>
+            </section>
+
             <section className="portfolio-section" id="projects">
                 <p className="section-label">PORTFOLIO</p>
                 <h2 className="section-title">
@@ -129,14 +172,9 @@ export default function ExtraInfo() {
                 <div className="services-grid">
                     {services.map((service) => (
                         <article key={service.title} className="service-card">
-                            <div className="service-icon">[]</div>
+                            <div className="service-icon">{service.icon}</div>
                             <h3>{service.title}</h3>
                             <p>{service.description}</p>
-                            {service.title === 'UI/UX Design' && (
-                                <a href="#contact" className="learn-more">
-                                    Learn more
-                                </a>
-                            )}
                         </article>
                     ))}
                 </div>

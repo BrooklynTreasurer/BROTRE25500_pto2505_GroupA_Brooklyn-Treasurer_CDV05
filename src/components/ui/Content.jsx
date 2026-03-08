@@ -43,7 +43,7 @@ export default function Content() {
                     >
                         IN
                     </a>
-                    <a href="mailto:hello@brooklyntreasurer.dev" className="social-icon" aria-label="Email">
+                    <a href="mailto:mcleantech20@gmail.com" className="social-icon" aria-label="Email">
                         @
                     </a>
                 </div>
