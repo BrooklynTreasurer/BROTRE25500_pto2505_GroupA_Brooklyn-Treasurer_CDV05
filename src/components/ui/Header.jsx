@@ -1,22 +1,42 @@
 
+import { useState } from 'react';
+
 export default function Header() {
+    const [isNavOpen, setIsNavOpen] = useState(false);
+
+    const handleNavLinkClick = () => {
+        setIsNavOpen(false);
+    };
+
     return (
         <>
-          <section className="top-bar">
+            <section className="top-bar">
                 <header className="header">
                     <p className="user">B</p>
                     <h2 className="header__title">Brooklyn Portfolio</h2>
                 </header>
 
-                <nav className="nav">
+                <button
+                    type="button"
+                    className={`nav-toggle${isNavOpen ? ' is-open' : ''}`}
+                    aria-label="Toggle navigation"
+                    aria-expanded={isNavOpen}
+                    onClick={() => setIsNavOpen((prev) => !prev)}
+                >
+                    <span className="nav-toggle-line" />
+                    <span className="nav-toggle-line" />
+                    <span className="nav-toggle-line" />
+                </button>
+
+                <nav className={`nav${isNavOpen ? ' is-open' : ''}`}>
                     <ul className="nav-list">
-                        <li className="nav__item"><a className="nav__link" href="#home">Home</a></li>
-                        <li className="nav__item"><a className="nav__link" href="#about">About</a></li>
-                        <li className="nav__item"><a className="nav__link" href="#projects">Projects</a></li>
-                        <li className="nav__item"><a className="nav__link" href="#contact">Contact</a></li>
+                        <li className="nav__item"><a className="nav__link" href="#home" onClick={handleNavLinkClick}>Home</a></li>
+                        <li className="nav__item"><a className="nav__link" href="#about" onClick={handleNavLinkClick}>About</a></li>
+                        <li className="nav__item"><a className="nav__link" href="#projects" onClick={handleNavLinkClick}>Projects</a></li>
+                        <li className="nav__item"><a className="nav__link" href="#contact" onClick={handleNavLinkClick}>Contact</a></li>
                     </ul>
                 </nav>
             </section>
         </>
-    )
+    );
 }
