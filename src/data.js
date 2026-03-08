@@ -79,7 +79,7 @@ export const projectsData = [
         image: kanbanPreview,
         viewLink: 'https://github.com/BrooklynTreasurer/BROTRE25500_pto2505_GroupA_Brooklyn-Treasurer_JSLPP',
         title: 'KanBan Task Manager',
-        description: 'A full-featured e-commerce solution with payment integration and admin dashboard.',
+        description: 'A responsive Kanban app with task creation, editing, localStorage persistence, and dark/light mode, deployed on Netlify.',
         tags: ['HTML', 'JavaScript', 'CSS', 'Mobile', 'UI/UX'],
     },
     {
