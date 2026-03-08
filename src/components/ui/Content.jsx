@@ -16,12 +16,12 @@ export default function Content() {
                 </p>
 
                 <div className="hero-actions">
-                    <button className="hire-me-button" type="button">
+                    <a className="hire-me-button" href="#contact">
                         Hire Me
-                    </button>
-                    <button className="projects-button" type="button">
+                    </a>
+                    <a className="projects-button" href="#projects">
                         View Projects
-                    </button>
+                    </a>
                 </div>
 
                 <div className="social-icons">

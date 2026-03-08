@@ -11,6 +11,19 @@ body {
     color: var(--text-color);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+#home,
+#about,
+#projects,
+#services,
+#skills,
+#contact {
+    scroll-margin-top: 90px;
+}
+
 
 /* header section */
 .top-bar{
@@ -74,13 +87,18 @@ body {
 }
 
 .nav__item {
+    list-style: none;
+}
+
+.nav__link {
     color: #f0f0f0;
     font-size: 0.95rem;
-    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
     transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
-.nav__item:hover {
+.nav__link:hover {
     color: var(--primary-color);
     text-shadow: 0 0 12px rgba(244, 67, 54, 0.35);
 }
@@ -148,6 +166,10 @@ body {
     font-size: 1rem;
     padding: 12px 24px;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hire-me-button {

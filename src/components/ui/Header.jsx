@@ -10,10 +10,10 @@ export default function Header() {
 
                 <nav className="nav">
                     <ul className="nav-list">
-                        <li className="nav__item">Home</li>
-                        <li className="nav__item">About</li>
-                        <li className="nav__item">Projects</li>
-                        <li className="nav__item">Contact</li>
+                        <li className="nav__item"><a className="nav__link" href="#home">Home</a></li>
+                        <li className="nav__item"><a className="nav__link" href="#about">About</a></li>
+                        <li className="nav__item"><a className="nav__link" href="#projects">Projects</a></li>
+                        <li className="nav__item"><a className="nav__link" href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </section>
