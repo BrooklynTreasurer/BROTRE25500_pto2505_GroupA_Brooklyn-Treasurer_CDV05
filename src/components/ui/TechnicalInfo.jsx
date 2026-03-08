@@ -1,5 +1,10 @@
 import { technicalSkillsData } from '../../data';
 
+/**
+ * Renders the technical skills and proficiency section.
+ *
+ * @returns {JSX.Element}
+ */
 export default function TechnicalInfo() {
     return (
         <section className="skills-section" id="skills">

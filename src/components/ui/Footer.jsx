@@ -1,3 +1,8 @@
+/**
+ * Renders the site footer.
+ *
+ * @returns {JSX.Element}
+ */
 export default function Footer() {
     return (
         <footer className="footer">

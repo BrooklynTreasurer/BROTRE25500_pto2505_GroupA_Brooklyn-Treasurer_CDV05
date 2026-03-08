@@ -3,6 +3,48 @@ import portfolioPreview from './components/images/Portfolio-Preview.png';
 import podcastAppPreview from './components/images/PodcastApp-Preview.png';
 import cartoonHero from './components/images/cartoon-hero.png';
 
+/**
+ * @typedef {Object} EducationEntry
+ * @property {string} school
+ * @property {string[]} points
+ */
+
+/**
+ * @typedef {Object} AboutMeData
+ * @property {string} image
+ * @property {string} introTitle
+ * @property {string} introHighlight
+ * @property {string[]} paragraphs
+ * @property {EducationEntry[]} education
+ */
+
+/**
+ * @typedef {Object} ProjectData
+ * @property {string} image
+ * @property {string} viewLink
+ * @property {string} title
+ * @property {string} description
+ * @property {string[]} tags
+ */
+
+/**
+ * @typedef {Object} ServiceData
+ * @property {string} icon
+ * @property {string} title
+ * @property {string} description
+ */
+
+/**
+ * @typedef {[string, number]} SkillItem
+ */
+
+/**
+ * @typedef {Object} TechnicalSkillGroup
+ * @property {string} title
+ * @property {SkillItem[]} items
+ */
+
+/** @type {AboutMeData} */
 export const aboutMeData = {
     image: cartoonHero,
     introTitle: 'Passionate Soon to be',
@@ -31,6 +73,7 @@ export const aboutMeData = {
     ],
 };
 
+/** @type {ProjectData[]} */
 export const projectsData = [
     {
         image: kanbanPreview,
@@ -55,6 +98,7 @@ export const projectsData = [
     },
 ];
 
+/** @type {ServiceData[]} */
 export const servicesData = [
     {
         icon: '💻',
@@ -79,6 +123,7 @@ export const servicesData = [
     },
 ];
 
+/** @type {TechnicalSkillGroup[]} */
 export const technicalSkillsData = [
     {
         title: 'Frontend',

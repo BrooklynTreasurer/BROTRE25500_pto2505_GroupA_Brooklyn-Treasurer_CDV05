@@ -1,5 +1,10 @@
 import heroImage from '../images/hero-image.jpg';
 
+/**
+ * Renders the hero/content section.
+ *
+ * @returns {JSX.Element}
+ */
 export default function Content() {
     return (
         <section className="content" id="home">

@@ -1,5 +1,10 @@
 import { aboutMeData } from '../../data';
 
+/**
+ * Renders the about section with bio and education details.
+ *
+ * @returns {JSX.Element}
+ */
 export default function AboutMe() {
     return (
         <section className="about-section" id="about">

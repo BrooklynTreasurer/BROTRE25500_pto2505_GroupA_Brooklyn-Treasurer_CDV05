@@ -5,6 +5,11 @@ import ExtraInfo from './components/ui/ExtraInfo'
 import Contact from './components/ui/Contact'
 import Footer from './components/ui/Footer'
 
+/**
+ * Root application layout.
+ *
+ * @returns {JSX.Element}
+ */
 function App() {
   return (
     <>

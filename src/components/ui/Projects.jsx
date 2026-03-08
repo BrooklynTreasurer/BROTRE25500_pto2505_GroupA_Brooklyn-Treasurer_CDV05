@@ -1,5 +1,10 @@
 import { projectsData } from '../../data';
 
+/**
+ * Renders the portfolio/projects section.
+ *
+ * @returns {JSX.Element}
+ */
 export default function Projects() {
     return (
         <section className="portfolio-section" id="projects">

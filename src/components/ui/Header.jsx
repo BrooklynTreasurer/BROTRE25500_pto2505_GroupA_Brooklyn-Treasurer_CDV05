@@ -1,9 +1,19 @@
 
 import { useState } from 'react';
 
+/**
+ * Renders the top navigation bar with mobile menu behavior.
+ *
+ * @returns {JSX.Element}
+ */
 export default function Header() {
     const [isNavOpen, setIsNavOpen] = useState(false);
 
+    /**
+     * Closes the mobile navigation after selecting a link.
+     *
+     * @returns {void}
+     */
     const handleNavLinkClick = () => {
         setIsNavOpen(false);
     };

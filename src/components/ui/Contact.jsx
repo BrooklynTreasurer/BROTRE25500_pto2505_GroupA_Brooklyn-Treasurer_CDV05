@@ -1,3 +1,8 @@
+/**
+ * Renders the contact section with contact cards and a message form.
+ *
+ * @returns {JSX.Element}
+ */
 export default function Contact() {
     return (
         <section className="contact-section" id="contact">

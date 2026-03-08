@@ -1,5 +1,10 @@
 import { servicesData } from '../../data';
 
+/**
+ * Renders the services section.
+ *
+ * @returns {JSX.Element}
+ */
 export default function Services() {
     return (
         <section className="services-section" id="services">
