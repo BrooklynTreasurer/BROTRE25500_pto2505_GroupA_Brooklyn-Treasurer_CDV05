@@ -266,6 +266,13 @@ body {
     color: #fff;
 }
 /* about section */
+.about-section{
+    background-color: #151515;
+    border: 1px solid #2b2b2b;
+    border-radius: 16px;
+    padding: 30px 40px;
+}
+
 .about-content {
     margin-top: 28px;
     display: flex;

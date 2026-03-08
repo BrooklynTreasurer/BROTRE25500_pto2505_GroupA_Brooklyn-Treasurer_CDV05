@@ -4,7 +4,7 @@ export default function Content() {
     return (
         <section className="content" id="home">
             <div className="content-text-container">
-                <p className="availability-pill">Available for Work</p>
+                <p className="availability-pill">🟢Available for Work</p>
                 <h1 className="content-title">
                     Hi, I'm <span className="gradient-text">Brooklyn Treasurer</span>
                 </h1>
